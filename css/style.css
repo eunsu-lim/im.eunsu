@@ -51,8 +51,8 @@ header .material-icons{ margin-left:4px; font-size:28px; color:#666; cursor: poi
 .item { position:relative; display:inline-block; width:25%;  background-color : #FFFFFF; border-radius : 24px; }
 .itembox{ margin:16px; overflow: hidden;  border-radius : 24px; position:relative; }
 .itembox img{ width:100%; vertical-align: bottom;  }
-.item_txt{ position: absolute; top:0; bottom:0;left:0;right:0; display: table; vertical-align:middle; opacity:0; margin: auto; width:100%; height:100%; text-align:center; transition: .5s ease-in-out all; }
-.item_txt p{ font-weight:800; font-size:1.25em; color:#000; text-shadow: white; } 
+.item_txt{ position: absolute; top:0; bottom:0;left:0;right:0; display: flex; display:-webkit-flex; justify-content: center; align-items: center; opacity:0; margin: auto; width:100%; height:100%; text-align:center; transition: .5s ease-in-out all; }
+.item_txt p{ font-weight:800; font-size:1.25em; color:#000; } 
 .item:hover img{  opacity: 0.3; }
 .item:hover .item_txt{ opacity:1; border-radius: 24px;}
 
