@@ -16,6 +16,8 @@ h1 a:hover{ color:#5f4b8b; }
 h1 a span{ display:flex; display:-webkit-flex; justify-content:center; align-items: center; flex:1;-webkit-flex:1; margin-right:8px; font-family: 'Lobster', cursive; color:#fff; text-align:center; width:28px; height:28px; background-color:#0f4c81; border-radius: 8px; border:1px solid #0f4c81; }
 a{text-decoration: none;}
 p,li{ color:#666; }
+button,input,textarea:focus { outline: none;}
+button{ background:none; background-color:white; border:none; }
 header nav{ flex:1; -webkit-flex:1; display:flex; display:-webkit-flex; align-items: center; justify-content: flex-end;}
 header nav a{ opacity: 0.5; }
 header nav a:hover{ opacity:1; }
@@ -68,9 +70,26 @@ header .material-icons{ margin-left:4px; font-size:28px; color:#666; cursor: poi
 #pf_container .project ul{overflow: hidden; margin-left:0; }
 #pf_container .project ul li{ margin:0 8px 8px 0; padding:4px 8px; list-style: none; float:left; font-size:14px; border:1px solid #c0c0c0; border-radius:20px; }
 
-
-
-
+.modal{ position:fixed; top:0; left:0; display:flex; justify-content:center; align-items:center; width:100%; height:100%;  }
+.modal_overlay{ position:absolute; width:100%; height:100%; background-color:rgba(0,0,0,0.6); }
+.modal_box{ position: relative;; top:0px; width:50%; background-color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.24);  }
+.modal_box h3{ padding:24px; }
+.modal_content{ padding:0 24px; }
+.hidden{ display: none;}
+.closeBtn{ position:absolute; top:16px; right:15px; }
+.closeBtn:hover .material-icons{ color:red; }
+.todo_form{display: flex; display:-webkit-flex; justify-content: center; align-items: center;}
+.write_todo{ padding-left:4px; width:calc(100% - 24px); height:32px; border:none; border-bottom:1px solid #c0c0c0; }
+.write_todo::placeholder{ padding-left: 2px; color:#c0c0c0; }
+.addBtn span{ font-size:32px; color:#0f4c81; cursor: pointer; }
+.addBtn span:hover{ color:navy;} 
+.todo_list{ overflow:auto; margin:0 4px 16px 4px;  height:240px; }
+.todo_list li{ display:flex; display:-webkit-flex; align-items: center; justify-content: flex-end; margin:4px 0;  list-style: none; }
+.todo_list li:hover .left{ font-weight:bold; }
+.todo_list li .left{ justify-self: flex-start; margin-right:auto; } 
+.todo_list li .material-icons{ margin-right:16px; color:#c0c0c0; cursor: pointer; }
+.todo_list li .material-icons:hover{ color:lightcoral; }
+.todo_list li.chked .left{ text-decoration: line-through; color:#c0c0c0; }
 
 @media screen and (max-width:768px){
     header .container{ margin:0 16px; height:64px; }
@@ -80,5 +99,5 @@ header .material-icons{ margin-left:4px; font-size:28px; color:#666; cursor: poi
     h1{ font-size:20px; margin-right:8px; }
     .search .searchbox{ border:none; }
     .search .searchbox input[type="search"]{ display:none; }
-    .searchbox i{ margin: 8px 16}
+    .searchbox i{ margin: 8px 16; }
 }
